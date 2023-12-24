@@ -203,7 +203,7 @@ static if(staticMixer) {
         int Mix_SetMusicPosition(double);
         int Mix_Playing(int);
         int Mix_PlayingMusic();
-        int Mix_SetMusicCMD(in char*);
+        int Mix_SetMusicCMD(const(char)*);
         int Mix_SetSynchroValue(int);
         int Mix_GetSynchroValue();
         Mix_Chunk* Mix_GetChunk(int);
@@ -281,7 +281,7 @@ else {
         alias da_Mix_SetMusicPosition = int function(double);
         alias da_Mix_Playing = int function(int);
         alias da_Mix_PlayingMusic = int function();
-        alias da_Mix_SetMusicCMD = int function(in char*);
+        alias da_Mix_SetMusicCMD = int function(const(char)*);
         alias da_Mix_SetSynchroValue = int function(int);
         alias da_Mix_GetSynchroValue = int function();
         alias da_Mix_GetChunk = Mix_Chunk* function(int);
